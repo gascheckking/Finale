@@ -1,0 +1,93 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0f0f0f;
+  color: white;
+}
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background-color: #12141a;
+}
+
+.logo-icon-fixed {
+  width: 140px;
+  height: auto;
+}
+
+.wallet-ui {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.connect-wallet-btn {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 0.3rem 0.7rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.nav-tabs {
+  display: flex;
+  justify-content: space-around;
+  background: #1c1f26;
+  padding: 0.3rem;
+}
+
+.tab-button {
+  background: transparent;
+  border: none;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.tab-button.active {
+  border-bottom: 2px solid #4caf50;
+}
+
+.tab-content {
+  padding: 0.5rem;
+}
+
+.card {
+  background: #1c1f26;
+  padding: 0.7rem;
+  margin-bottom: 0.5rem;
+  border-radius: 8px;
+}
+
+.card.dark {
+  background: #1c1f26;
+}
+
+.card-grid {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.airdrop-circle {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #4caf50, #00e676);
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  color: white;
+  margin: 0 auto;
+}
+
+.footer {
+  padding: 0.5rem;
+  text-align: center;
+  font-size: 0.75rem;
+}
