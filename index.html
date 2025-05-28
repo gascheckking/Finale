@@ -1,1 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>WarpAI</title>
+  <meta name="alchemy-key" content="aH4-X2bNp1BarPcBcHiWR6vHxJz_lGbA" />
+  <meta name="etherscan-key" content="Y1VRJKQB1A4K2JTA8GE1YDH3W54W4I35D5" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+</head>
+<body>
+  <header class="app-header">
+    <div class="logo-title">
+      <img src="logo.png" alt="WarpAi Logo" class="logo-icon-fixed" />
+    </div>
+    <div class="wallet-ui">
+      <span id="xpDisplay">0 XP 🔥</span>
+      <div id="walletUI">
+        <span id="walletAddress">Not Connected</span>
+        <button id="connectWallet" class="connect-wallet-btn">Connect Wallet</button>
+      </div>
+    </div>
+  </header>
 
+  <main id="appContent">
+    <nav class="nav-tabs">
+      <button class="tab-button active" data-tab="track">Track</button>
+      <button class="tab-button" data-tab="rewards">Rewards</button>
+      <button class="tab-button" data-tab="profile">Profile</button>
+      <button class="tab-button" data-tab="premium">Premium</button>
+    </nav>
+
+    <section class="tab-content track" data-tab="track">
+      <div class="card dark">
+        <h3>📊 Onchain Activity</h3>
+        <p>Total Transactions: <strong id="txCount">–</strong></p>
+        <p>Gas Spent: <strong id="gasSpent">–</strong></p>
+        <button id="refreshTrack">Refresh</button>
+      </div>
+    </section>
+
+    <section class="tab-content rewards" data-tab="rewards" style="display: none;">
+      <div class="card dark">
+        <h3>🎁 Daily Claim</h3>
+        <p>+5 WAI Daily</p>
+        <button id="claimXpBtn">Claim Now</button>
+        <p id="xpClaimFeedback" style="display: none;">Claimed! 🎉</p>
+      </div>
+      <div class="card dark">
+        <h3>📤 Share & Earn</h3>
+        <button id="shareOnXBtn">Share on X</button>
+        <button id="shareFarcasterBtn">Share on Farcaster</button>
+        <p id="shareFeedback" style="display: none;">Shared! +5 WAI 🎉</p>
+      </div>
+    </section>
+
+    <section class="tab-content profile" data-tab="profile" style="display: none;">
+      <div class="card-grid">
+        <div class="card dark">
+          <h3>Wallet Info</h3>
+          <p id="walletAddress">Not Connected</p>
+          <button id="connectWalletBtn" class="connect-wallet-btn">Connect Wallet</button>
+          <button id="viewFarcasterProfileBtn" disabled>View My Farcaster Profile</button>
+          <p>Total XP: <strong id="totalXP">0</strong></p>
+          <progress value="0" max="200" style="width: 100%;"></progress>
+        </div>
+        <div class="card dark">
+          <h3>📦 Claim History</h3>
+          <ul id="claimHistory">
+            <li>2025-05-26: +5 WAI</li>
+          </ul>
+        </div>
+        <div class="card dark">
+          <h3>🏆 Achievements</h3>
+          <ul>
+            <li>✅ Early Adopter</li>
+            <li>🔓 Mint Master</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="tab-content premium" data-tab="premium" style="display: none;">
+      <div class="card dark">
+        <h3>💎 Unlock Premium</h3>
+        <button id="upgradeBtn">Upgrade to Premium</button>
+        <p id="premiumStatus" style="display: none;">✅ You're Premium!</p>
+      </div>
+      <div class="card dark">
+        <h3>🎁 Airdrop Eligibility</h3>
+        <div class="airdrop-circle">
+          <span id="airdropChance">0%</span>
+          <p>Chance for Airdrop</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Built by <a href="https://warpcast.com/warpaiapp" target="_blank">WarpAI</a> • 
+    <a href="https://zora.co/coin/base:0x8ab57bdfc4e900b62f309bfaa6e1802755330ca6" target="_blank">View Token</a></p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
